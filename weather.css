@@ -1,0 +1,22 @@
+body {
+    background-image: url('http://k38.kn3.net/taringa/7/0/5/7/8/2//rsmafull/3C9.jpg?5305'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: white; 
+
+}
+
+h1 {
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+#weather-display {
+    background: white;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    color: black; 
+    font-size: 1.5em; 
+    margin-top: 5%; 
+    padding-top: 2.5%; 
+    padding-bottom: 2.5%; 
+    width: 33%; 
+}
