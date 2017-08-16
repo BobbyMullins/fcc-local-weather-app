@@ -25,15 +25,48 @@ if (navigator.geolocation) {
               displayWindSpeed.textContent = 'Wind Speed: ' + ' ' + Math.floor(data.wind.speed) + " " + "MPH";
             
               //wind direction
-              var displayWindDirection= document.getElementById('windDirection'); 
-              displayWindDirection.textContent = data.wind.deg; 
+//              var displayWindDirection= document.getElementById('windDirection'); 
+//              displayWindDirection.textContent = data.wind.deg; 
+              
+              //Fahrenheit / Celsius Conversion 
+          
+              $('#btn-f').click(function(){
+                  var cTemp = Math.floor(data.main.temp);
+                  var cToFahr = (cTemp * 9) / 5 + 32;
+                  $('#temp').html(cToFahr + ' Degrees Fahrenheit'); 
+                  $('#btn-f').hide(); 
+                  $('#btn-c').show();  
+                   
+                });
+              
+              $('#btn-c').click(function(){
+                  $('#temp').html(Math.floor(data.main.temp) + ' Degrees Celsius'); 
+                  $('#btn-f').show(); 
+                  $('#btn-c').hide();  
+                   
+                });
+              
           })
     
-       }); 
+       });  
 
     } 
   
 }); 
+
+//Celsius to Fahrenheit
+//function cToF(celsius){
+//  var cTemp = celsius;
+//  var cToFahr = cTemp * 9 / 5 + 32;
+//}
+
+//Fahrenheit to Celsisus
+//function fToC(fahrenheit){
+//  var fTemp = fahrenheit;
+//  var fToCel = (fTemp - 32) * 5 / 9;
+//  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+//    console.log(message);
+//} 
 
      
  
